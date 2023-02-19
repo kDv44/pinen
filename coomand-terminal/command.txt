@@ -1,0 +1,39 @@
+git clone git@github.com:kDv44/pinen.git
+cd .\pinen\
+git add .
+git commit -m "add txt file"
+git branch patch2
+git checkout patch2
+git add .
+git commit -m "add ver1"
+git checkout main
+git branch fix1
+git checkout fix1
+git add .
+git commit -m 'fix1'
+git checkout main
+git merge fix1
+git merge patch2
+git add .
+git commit -m 'fix__'
+git branch -d patch2
+git branch -d fix1
+git add .
+git commit -m 'ver1'
+git branch project2
+git branch project3
+git checkout project2
+git checkout project3
+git checkout project2
+git add .
+git commit -m 'ver2'
+git checkout project3
+git add .
+git status
+git checkout main
+git merge project2
+git merge project3
+git add .
+git commit -m 'fix comflict'
+git status
+git push origin main
